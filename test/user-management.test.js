@@ -57,6 +57,10 @@ describe("User Management", () => {
     const actual = await UsersDAO.logoutUser(testUser.email)
     expect(actual.success).toBeTruthy()
     const sessionResult = await UsersDAO.getUserSession(testUser.email)
+
+    // mine 
+    console.log("mine1: ", sessionResult);
+
     expect(sessionResult).toBeNull()
   })
 })
